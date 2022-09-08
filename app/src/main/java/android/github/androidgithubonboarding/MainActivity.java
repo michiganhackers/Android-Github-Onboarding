@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         //Todo add name to names arraylist like in lines 22 and 23
         names.add("Siddharth");
         names.add("Caleb");
+        names.add("Caleb Gifford");
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
