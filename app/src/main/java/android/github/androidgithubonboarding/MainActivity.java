@@ -17,15 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button mainButton = findViewById(R.id.generate);
-        ArrayList names = new ArrayList<String>();
-        //Todo add name to names arraylist like in line 22
+        ArrayList<String> names = new ArrayList<>();
+        //Todo add name to names arraylist like in lines 22 and 23
         names.add("Siddharth");
-        Random rand = new Random();
-        int random_number = rand.nextInt(names.size());
+        names.add("Caleb");
         mainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = (String) names.get(random_number);
+                String text = names.get((int)(Math.random() * names.size()));
                 Toast.makeText(getApplicationContext(),text,Toast.LENGTH_SHORT).show();
             }
         });
